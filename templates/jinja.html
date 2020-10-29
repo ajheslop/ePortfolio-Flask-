@@ -1,0 +1,31 @@
+<!-- always start a page with exporting in the layout.html -->
+{% extends "layout.html" %} 
+{% block title %}Profile{% endblock %} {% block main
+%}
+
+<div class="container">
+  <div class="row">
+    <div class="column">
+      <h1>This is an example of using JINJA 2</h1>
+
+      <hr />
+
+          <hr />
+          <!-- if we have a user then render the profile, otherwise show message 'not found' -->
+
+
+          </p>
+         <h4>Looping:</h4>
+        <ul class="ulclass1">
+          {% for lang in langs %}
+          <li class="ulclass1">{{ lang }}</li>
+          {% endfor %}
+        </ul>
+        </div>
+
+       
+      </div>
+      {% endblock %}
+    </div>
+  </div>
+</div>

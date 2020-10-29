@@ -1,0 +1,12 @@
+.ulclass1 {
+    margin: 0;
+    padding: 0;
+    background-color: green;
+ 
+  }
+
+  .ulclass1 li { 
+    display:list;
+    list-style: none;
+    }
+  

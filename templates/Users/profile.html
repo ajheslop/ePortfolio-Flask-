@@ -1,0 +1,53 @@
+<!-- always start a page with exporting in the layout.html -->
+{% extends "layout.html" %} {% block title %}Profile{% endblock %} {% block main
+%}
+
+<div class="container">
+  <div class="row">
+    <div class="column">
+      <h1>User Profile:</h1>
+
+      <hr />
+
+      <div class="card">
+        <div class="card-body">
+          <h1><i>{{ username }}</i></h1>
+<!-- I am using an if statement to find out if the USER i am is correct, if so then display X image-->
+{% if username == 'Alan' %} 
+    <img class="imgprofile" src="{{ url_for('static',
+          filename="img/Alan.jpg")}}">
+{% elif username =='Rachael' %}
+    <img class="imgprofile" src="{{ url_for('static',
+          filename="img/Rachael.jpg")}}">
+{% elif username =='Kieran' %}
+    <img class="imgprofile" src="{{ url_for('static',
+          filename="img/Kieran.jpg")}}">
+{% endif %}
+
+          <hr />
+          <!-- if we have a user then render the profile, otherwise show message 'not found' -->
+
+          {% if user %}
+           {% else %}
+          <p>User not found</p>
+          {% endif %}
+
+          <h2>
+            <p><strong> {{ user["name"] }}</strong></p>
+          </h2>
+          <p class="text-muted">{{ user["bio"] }}</p>
+          <p>
+            <em>{{ user["twitter_handle"] }} </em>
+          </p>
+
+</div>        
+</div>
+
+
+</div>
+       
+      </div>
+      {% endblock %}
+    </div>
+  </div>
+</div>

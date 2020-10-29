@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css')}}"
+    />
+      <div class="mainrow">
+           <div class="col-sm-3">
+           
+               <img class="hdr" src="{{ url_for('static',
+          filename="img/header.jpg")}}">    
+            </div>
+ 
+     </div><!--end row-->
+    <!--navigation bar -->
+    <div id="nav-bar">
+      <ul>
+        <li><a href="/profile/Alan">Alan's Profile</a></li>
+        <li><a href="/profile/Rachael">Rachael's Profile</a></li>
+        <li><a href="/profile/Kieran">Kieran's Profile</a></li>
+        <li><a href="/jinja">Jinja Looping</a></li>
+        <li><a href="/templates">Templates</a></li>
+
+
+        <li><a href="/">Home</a></li>
+
+      </ul>
+    </div>
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+      <body>
+    
+
+  <main>{% block main %} {% endblock %}</main>
+<ul>
+{% for item in items%}
+  <li>item.text</li>
+{% endfor %}
+</ul>
+  
+
+    <!-- Known as template inheritence (each page i define  will look at this page for the layout) 
+
+each page requires a block title and block main-->
+  </body>
+</html>
